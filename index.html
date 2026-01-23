@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Izquierdo C.A. - Expertos en CCTV, Redes y Tecnología</title>
+
+    <meta
+      name="description"
+      content="Especialistas en CCTV, redes y soporte técnico. Soluciones integrales para tu seguridad y conectividad."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+
+    <style>
+      /* Base y Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background: #111;
+        color: #fff;
+        line-height: 1.6;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+      a {
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      /* Navegación Desktop */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 75px;
+        background: rgba(17, 17, 17, 0.95);
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+        border-bottom: 1px solid #333;
+      }
+      .logo {
+        font-weight: 700;
+        color: #00bfff;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
+      nav li {
+        margin-left: 1.5rem;
+      }
+      nav a {
+        color: #fff;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      nav a:hover {
+        color: #00bfff;
+      }
+
+      /* Iconos Responsivos (Solo Mobile/Tablet) */
+      .mobile-nav-icons {
+        display: none; /* Oculto por defecto */
+        gap: 15px;
+      }
+      .mobile-nav-icons a {
+        color: #00bfff;
+        font-size: 1.3rem;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(0, 191, 255, 0.3);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      /* Header Parallax */
+      #header {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      #header video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 140%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+      }
+      .parallax-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.65);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-content h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .hero-content p {
+        font-size: 1.5rem;
+        color: #32cd32;
+        margin-bottom: 30px;
+        font-weight: 300;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 15px 40px;
+        border: 2px solid #00bfff;
+        color: #00bfff;
+        font-weight: 700;
+        border-radius: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+      .cta-button:hover {
+        background: #00bfff;
+        color: #111;
+        box-shadow: 0 0 25px rgba(0, 191, 255, 0.5);
+        transform: translateY(-3px);
+      }
+
+      /* Secciones Generales */
+      section {
+        padding: 100px 5%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+      }
+      h2 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 50px;
+        color: #00bfff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      /* Nuestra Misión */
+      .mission-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .mission-header h3 {
+        color: #32cd32;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-top: -30px;
+        margin-bottom: 20px;
+      }
+      .mission-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        border-top: 1px solid #222;
+        padding-top: 40px;
+      }
+      .mission-col p {
+        font-size: 1.1rem;
+        color: #ccc;
+        text-align: justify;
+      }
+
+      /* Grid Estándar (Catálogo y Servicios) */
+      .grid-standard {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-bottom: 50px;
+      }
+      .card-standard {
+        background: #1a1a1a;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #333;
+        transition: 0.3s;
+        position: relative;
+      }
+      .card-standard:hover {
+        border-color: #00bfff;
+        transform: translateY(-5px);
+      }
+      .card-standard img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-bottom: 1px solid #333;
+        filter: brightness(0.7);
+        transition: 0.3s;
+      }
+      .card-standard:hover img {
+        filter: brightness(1);
+      }
+      .card-body-standard {
+        padding: 25px;
+        text-align: center;
+      }
+      .card-body-standard h3 {
+        color: #00bfff;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+      }
+      .card-body-standard p {
+        font-size: 0.9rem;
+        color: #ccc;
+      }
+
+      /* Icono flotante en servicios */
+      .service-icon-tag {
+        position: absolute;
+        top: 190px;
+        right: 20px;
+        background: #00bfff;
+        color: #111;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        border: 4px solid #1a1a1a;
+        z-index: 5;
+      }
+
+      /* Marquee */
+      .marquee {
+        background: #111;
+        padding: 50px 0;
+        overflow: hidden;
+        border-top: 1px solid #222;
+        border-bottom: 1px solid #222;
+      }
+      .marquee-inner {
+        display: flex;
+        animation: scroll 30s linear infinite;
+        width: max-content;
+        align-items: center;
+      }
+      .marquee-inner i {
+        font-size: 3.5rem;
+        margin: 0 60px;
+        color: #333;
+      }
+
+      /* Testimonios */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+      .testimonial-box {
+        background: #1a1a1a;
+        padding: 35px;
+        border-radius: 15px;
+        border-top: 4px solid #32cd32;
+        transition: 0.3s;
+      }
+      .testimonial-box cite {
+        display: block;
+        font-weight: bold;
+        color: #00bfff;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        margin-top: 15px;
+        font-style: normal;
+      }
+
+      /* WhatsApp */
+      .whatsapp-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #25d366;
+        color: #fff;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        z-index: 2000;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Footer */
+      footer {
+        background: #050505;
+        padding: 80px 5% 40px;
+        text-align: center;
+        border-top: 1px solid #222;
+      }
+      .social-icons a {
+        font-size: 1.8rem;
+        color: #fff;
+        margin: 0 20px;
+        display: inline-block;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (max-width: 992px) {
+        .grid-standard,
+        .testimonials-grid,
+        .mission-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+        nav ul {
+          display: none;
+        } /* Oculta menú de texto */
+        .mobile-nav-icons {
+          display: flex;
+        } /* Muestra los iconos */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">EL IZQUIERDO C.A.</div>
+      <ul>
+        <li><a href="#header">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li>
+          <a href="https://suniagajoberland.github.io/catalogo/" target="_blank"
+            >Catálogo</a
+          >
+        </li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li>
+          <a href="https://wa.me/584143693311" target="_blank">Contacto</a>
+        </li>
+      </ul>
+      <div class="mobile-nav-icons">
+        <a href="#header" title="Inicio"><i class="fas fa-home"></i></a>
+        <a href="#productos" title="Catálogo"
+          ><i class="fas fa-th-large"></i
+        ></a>
+      </div>
+    </nav>
+
+    <header id="header">
+      <div class="video-container">
+        <video id="v-parallax" autoplay muted loop playsinline>
+          <source
+            src="https://www.pexels.com/download/video/3546119/"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div class="parallax-overlay">
+        <div class="hero-content">
+          <h1>Seguridad Inteligente</h1>
+          <p>CCTV • Conectividad • Soporte IT Especializado</p>
+          <a href="#productos" class="cta-button">Ver Catálogo</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="nosotros">
+      <div class="mission-header">
+        <h2>Nuestra Misión</h2>
+        <h3>Excelencia en Seguridad Electrónica</h3>
+      </div>
+      <div class="mission-grid">
+        <div class="mission-col">
+          <p>
+            En <strong>El Izquierdo C.A.</strong>, nuestra misión fundamental es
+            proporcionar tranquilidad y control absoluto a través de sistemas de
+            seguridad de última generación. Entendemos que en el mundo actual,
+            la protección de activos requiere de una infraestructura tecnológica
+            robusta.
+          </p>
+        </div>
+        <div class="mission-col">
+          <p>
+            Nos proyectamos como el aliado estratégico líder en Venezuela para
+            la implementación de redes de datos y CCTV. Combinamos años de
+            experiencia técnica con un compromiso ético inquebrantable para cada
+            uno de nuestros proyectos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos">
+      <h2>Catálogo Destacado</h2>
+      <div class="grid-standard">
+        <div class="card-standard">
+          <img
+            src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80"
+            alt="CCTV"
+          />
+          <div class="card-body-standard">
+            <h3>Seguridad CCTV</h3>
+            <p>
+              Cámaras IP de alta resolución y sistemas de vigilancia con
+              monitoreo remoto global.
+            </p>
+          </div>
+        </div>
+        <div class="card-standard">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1683134033173-f43b86168498?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Redes"
+          />
+          <div class="card-body-standard">
+            <h3>Redes & Enlaces</h3>
+            <p>
+              Equipos de networking profesional: Switches, Routers y antenas de
+              alto rendimiento.
+            </p>
+          </div>
+        </div>
+        <div class="card-standard">
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+            alt="Hardware"
+          />
+          <div class="card-body-standard">
+            <h3>Componentes IT</h3>
+            <p>
+              Periféricos, almacenamiento masivo y hardware especializado para
+              estaciones críticas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center">
+        <a
+          href="https://suniagajoberland.github.io/catalogo/"
+          target="_blank"
+          class="cta-button"
+          >Ver Catálogo</a
+        >
+      </div>
+    </section>
+
+    <section id="servicios" style="background: #0a0a0a; max-width: 100%">
+      <div style="max-width: 1200px; margin: 0 auto">
+        <h2>Servicios Profesionales</h2>
+        <div class="grid-standard">
+          <div class="card-standard">
+            <img
+              src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80"
+              alt="Instalación"
+            />
+            <div class="service-icon-tag"><i class="fas fa-tools"></i></div>
+            <div class="card-body-standard">
+              <h3>Instalación Profesional</h3>
+              <p>
+                Configuración técnica de sistemas de seguridad y cableado con
+                acabado estético y funcional.
+              </p>
+            </div>
+          </div>
+          <div class="card-standard">
+            <img
+              src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=600&q=80"
+              alt="Soporte"
+            />
+            <div class="service-icon-tag">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="card-body-standard">
+              <h3>Soporte IT</h3>
+              <p>
+                Mantenimiento preventivo de equipos y resolución de fallas
+                críticas en hardware y software.
+              </p>
+            </div>
+          </div>
+          <div class="card-standard">
+            <img
+              src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80"
+              alt="Auditoría"
+            />
+            <div class="service-icon-tag">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="card-body-standard">
+              <h3>Auditoría de Redes</h3>
+              <p>
+                Optimización de canales WiFi y redes locales para garantizar la
+                máxima velocidad disponible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee">
+      <div class="marquee-inner">
+        <i class="fab fa-cisco"></i><i class="fab fa-intel"></i
+        ><i class="fab fa-microsoft"></i><i class="fab fa-aws"></i
+        ><i class="fab fa-google"></i><i class="fab fa-apple"></i>
+        <i class="fab fa-cisco"></i><i class="fab fa-intel"></i
+        ><i class="fab fa-microsoft"></i><i class="fab fa-aws"></i
+        ><i class="fab fa-google"></i><i class="fab fa-apple"></i>
+      </div>
+    </div>
+
+    <section id="testimonios">
+      <h2>Confianza de Nuestros Clientes</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-box">
+          <i
+            class="fas fa-quote-left"
+            style="color: #32cd32; margin-bottom: 10px; display: block"
+          ></i>
+          <p>
+            "La instalación de las cámaras fue impecable. El equipo técnico es
+            muy detallista."
+          </p>
+          <cite>— Carlos Mendoza, Comercio Local</cite>
+        </div>
+        <div class="testimonial-box">
+          <i
+            class="fas fa-quote-left"
+            style="color: #32cd32; margin-bottom: 10px; display: block"
+          ></i>
+          <p>
+            "Excelente soporte técnico. Resolvieron nuestros problemas de red en
+            tiempo récord."
+          </p>
+          <cite>— Laura Rivas, Ing. de Sistemas</cite>
+        </div>
+        <div class="testimonial-box">
+          <i
+            class="fas fa-quote-left"
+            style="color: #32cd32; margin-bottom: 10px; display: block"
+          ></i>
+          <p>
+            "Los mejores en CCTV. Equipos originales y una asesoría honesta y
+            profesional."
+          </p>
+          <cite>— Juan Arrieta, Administrador</cite>
+        </div>
+      </div>
+    </section>
+
+    <a href="https://wa.me/584143693311" class="whatsapp-btn" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/profile.php?id=100068863038976"
+          target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/elizquierdoca1/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.mercadolibre.com.ve/pagina/elizquierdoca"
+          target="_blank"
+          ><i class="fas fa-shopping-bag"></i
+        ></a>
+        <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      </div>
+      <p style="margin-top: 20px">
+        EL IZQUIERDO C.A. - Innovación en Seguridad y Tecnología Informática.
+      </p>
+      <p class="copyright">
+        © 2026 Todos los Derechos Reservados. Caracas, Venezuela.
+      </p>
+    </footer>
+
+    <script>
+      const controller = new ScrollMagic.Controller();
+      new ScrollMagic.Scene({
+        triggerElement: "#header",
+        triggerHook: 0,
+        duration: "100%",
+      })
+        .setTween(gsap.to("#v-parallax", { y: "25%", ease: "none" }))
+        .addTo(controller);
+
+      $(document).on("click", 'a[href^="#"]', function (event) {
+        event.preventDefault();
+        $("html, body").animate(
+          { scrollTop: $($.attr(this, "href")).offset().top - 75 },
+          800,
+        );
+      });
+    </script>
+  </body>
+</html>
