@@ -3,31 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      El Izquierdo C.A. | Seguridad Electrónica y Redes en Venezuela
-    </title>
-
+    
+    <title>El Izquierdo C.A. | Seguridad Electrónica, CCTV y Redes en Venezuela</title>
     <link rel="icon" type="image/png" href="img/logo.png" />
-
-    <meta
-      name="description"
-      content="Líderes en instalación de CCTV, infraestructura de redes y soporte técnico IT en Venezuela. Soluciones avanzadas en seguridad electrónica para empresas y hogares."
-    />
-    <meta
-      name="keywords"
-      content="CCTV, cámaras de seguridad, redes de datos, soporte técnico, El Izquierdo, seguridad electrónica Venezuela, instalación de cámaras"
-    />
+    <meta name="description" content="El Izquierdo C.A. - Expertos en Seguridad Electrónica. Venta e instalación de CCTV Hikvision, Dahua, redes TP-Link, Cisco y Ubiquiti en Venezuela. Soporte IT profesional." />
+    <meta name="keywords" content="El Izquierdo, El Izquierdo C.A., CCTV Venezuela, Cámaras de seguridad, Hikvision Venezuela, Dahua, TP-Link, Cisco, Ubiquiti, Redes de datos, Soporte técnico IT Caracas" />
     <meta name="author" content="El Izquierdo C.A." />
     <link rel="canonical" href="https://www.elizquierdoca.com/" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <meta property="og:title" content="El Izquierdo C.A. | Seguridad e Infraestructura Tecnológica" />
+    <meta property="og:description" content="Soluciones avanzadas en CCTV, Redes y Soporte IT con las mejores marcas del mercado." />
+    <meta property="og:image" content="img/logo.png" />
+    <meta property="og:url" content="https://www.elizquierdoca.com/" />
+    <meta property="og:type" content="website" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "El Izquierdo C.A.",
+      "image": "https://www.elizquierdoca.com/img/logo.png",
+      "@id": "https://www.elizquierdoca.com/",
+      "url": "https://www.elizquierdoca.com/",
+      "telephone": "+584125641948",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Caracas",
+        "addressLocality": "Caracas",
+        "addressCountry": "VE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.4806,
+        "longitude": -66.9036
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/elizquierdoca1/"
+      ],
+      "brand": ["Hikvision", "TP-Link", "Cisco", "Ubiquiti", "Dahua", "HiLook", "Western Digital"]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -36,11 +60,7 @@
 
     <style>
       /* --- Base y Reset --- */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
         font-family: "Roboto", sans-serif;
         background: #0d1117;
@@ -49,10 +69,7 @@
         overflow-x: hidden;
         scroll-behavior: smooth;
       }
-      a {
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
+      a { text-decoration: none; transition: all 0.3s ease; }
 
       /* --- NAVEGACIÓN --- */
       nav {
@@ -69,35 +86,20 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       }
-      .logo-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        min-width: 0;
-      }
-      .logo-img {
-        height: 50px;
-        width: auto;
-        object-fit: contain;
-      }
+      .logo-container { display: flex; align-items: center; gap: 10px; min-width: 0; }
+      .logo-img { height: 50px; width: auto; object-fit: contain; }
       .logo-text {
         font-weight: 700;
         color: #0d1117;
-        font-size: 1.1rem; /* Un poco más pequeño para asegurar single line */
+        font-size: 1.1rem;
         letter-spacing: 1px;
         font-family: "Orbitron", sans-serif;
         white-space: nowrap;
       }
 
-      nav ul {
-        list-style: none;
-        display: flex;
-      }
-      nav li {
-        margin-left: 1.5rem;
-      }
+      nav ul { list-style: none; display: flex; }
+      nav li { margin-left: 1.5rem; }
       nav a {
         color: #161b22;
         font-size: 0.85rem;
@@ -105,14 +107,9 @@
         font-weight: 700;
         letter-spacing: 1px;
       }
-      nav a:hover {
-        color: #0056b3;
-      }
+      nav a:hover { color: #0056b3; }
 
-      .mobile-nav-icons {
-        display: none;
-        gap: 10px;
-      }
+      .mobile-nav-icons { display: none; gap: 10px; }
       .mobile-nav-icons a {
         color: #161b22;
         font-size: 1.1rem;
@@ -126,7 +123,7 @@
         background: rgba(255, 255, 255, 0.3);
       }
 
-      /* --- HEADER (FIXED MARGIN) --- */
+      /* --- HEADER (VIDEO CENTRADO) --- */
       #header {
         position: relative;
         height: 100vh;
@@ -136,7 +133,6 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin-top: 0; /* Aseguramos que no haya margen */
       }
       .video-container {
         position: absolute;
@@ -167,7 +163,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 75px; /* Offset para el nav */
+        padding-top: 75px;
       }
       .hero-content h1 {
         font-size: 4rem;
@@ -190,73 +186,29 @@
         font-weight: 700;
         border-radius: 8px;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.4s ease;
         background: rgba(88, 166, 255, 0.1);
         backdrop-filter: blur(10px);
       }
-      .cta-button:hover {
-        background: #58a6ff;
-        color: #0d1117;
-        box-shadow: 0 0 25px rgba(88, 166, 255, 0.6);
-        transform: translateY(-3px);
-      }
+      .cta-button:hover { background: #58a6ff; color: #0d1117; transform: translateY(-3px); }
 
-      /* --- SECCIONES Y GRIDS (TU DISEÑO ORIGINAL) --- */
-      section {
-        padding: 60px 5%;
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 2;
-      }
-      h2 {
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 40px;
-        color: #58a6ff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
+      /* --- SECCIONES --- */
+      section { padding: 60px 5%; max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
+      h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; color: #58a6ff; text-transform: uppercase; }
 
-      .grid-standard {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-      }
+      .grid-standard { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
 
       .card-standard {
         background: #161b22;
         border-radius: 12px;
         overflow: hidden;
         border: 1px solid #30363d;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: 0.4s;
         position: relative;
         cursor: pointer;
       }
+      .card-standard:hover { transform: translateY(-10px); border-color: #58a6ff; }
 
-      .card-standard:hover {
-        transform: translateY(-10px) scale(1.02);
-        border-color: #58a6ff;
-        box-shadow: 0 10px 30px rgba(88, 166, 255, 0.2);
-      }
-
-      .media-wrapper {
-        position: relative;
-        width: 100%;
-        height: 230px;
-        overflow: hidden;
-        background: #000;
-      }
-
-      .card-standard img {
-        transition: transform 0.5s ease;
-      }
-
-      .card-standard:hover img {
-        transform: scale(1.1);
-      }
-
+      .media-wrapper { position: relative; width: 100%; height: 230px; overflow: hidden; background: #000; }
       .card-standard video {
         position: absolute;
         top: 0;
@@ -265,44 +217,15 @@
         height: 100%;
         object-fit: cover;
         opacity: 0;
-        pointer-events: none;
         transition: opacity 0.4s ease;
       }
-
-      .card-standard.playing video {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .card-body-standard {
-        padding: 25px;
-        text-align: center;
-      }
-
-      .card-body-standard h3 {
-        color: #58a6ff;
-        margin-bottom: 10px;
-        font-size: 1.1rem;
-      }
+      .card-standard.playing video { opacity: 1; }
+      .card-body-standard { padding: 25px; text-align: center; }
 
       /* --- DIFERENCIADORES --- */
-      .diff-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        text-align: center;
-      }
-      .diff-item {
-        padding: 25px 15px;
-        background: rgba(22, 27, 34, 0.5);
-        border: 1px solid #30363d;
-        border-radius: 15px;
-      }
-      .diff-item i {
-        font-size: 2.2rem;
-        color: #58a6ff;
-        margin-bottom: 15px;
-      }
+      .diff-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+      .diff-item { padding: 25px 15px; background: rgba(22, 27, 34, 0.5); border: 1px solid #30363d; border-radius: 15px; }
+      .diff-item i { font-size: 2.2rem; color: #58a6ff; margin-bottom: 15px; }
 
       .service-icon-tag {
         position: absolute;
@@ -316,150 +239,40 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.2rem;
-        border: 3px solid #161b22;
         z-index: 5;
+        border: 3px solid #161b22;
       }
 
       /* --- MARQUEE --- */
-      .marquee {
-        background: #0d1117;
-        padding: 30px 0;
-        overflow: hidden;
-        border-top: 1px solid #30363d;
-        border-bottom: 1px solid #30363d;
-      }
-      .marquee-inner {
-        display: flex;
-        animation: scroll 40s linear infinite;
-        width: max-content;
-      }
-      .brand-item {
-        font-family: "Orbitron", sans-serif;
-        font-size: 1.2rem;
-        color: #484f58;
-        margin: 0 40px;
-        text-transform: uppercase;
-      }
+      .marquee { background: #0d1117; padding: 30px 0; overflow: hidden; border-top: 1px solid #30363d; border-bottom: 1px solid #30363d; }
+      .marquee-inner { display: flex; animation: scroll 40s linear infinite; width: max-content; }
+      .brand-item { font-family: "Orbitron", sans-serif; font-size: 1.2rem; color: #484f58; margin: 0 40px; text-transform: uppercase; }
+
+      @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+      /* --- WHATSAPP --- */
+      .wa-container { position: fixed; bottom: 30px; right: 30px; z-index: 3000; display: flex; flex-direction: column; align-items: flex-end; }
+      .wa-menu { display: none; flex-direction: column; gap: 10px; margin-bottom: 15px; }
+      .wa-advisor { background: #1c2128; color: #f0f6fc; padding: 12px 20px; border-radius: 30px; display: flex; align-items: center; gap: 12px; border: 1px solid #30363d; font-size: 0.85rem; font-weight: 700; }
+      .wa-main-btn { background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; cursor: pointer; border: none; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); transition: 0.4s; }
+      .wa-main-btn.active { background: #ff3b30 !important; transform: rotate(135deg); }
 
       /* --- FOOTER --- */
-      footer {
-        background: #0a0a0a;
-        padding: 60px 5% 40px;
-        text-align: center;
-        border-top: 1px solid #30363d;
-      }
+      footer { background: #0a0a0a; padding: 60px 5% 40px; text-align: center; border-top: 1px solid #30363d; }
 
-      /* --- WHATSAPP (ESTILO PROFESIONAL) --- */
-      .wa-container {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        z-index: 3000;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-      }
-      .wa-menu {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 15px;
-        animation: popIn 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-      }
-      .wa-advisor {
-        background: #1c2128;
-        color: #f0f6fc;
-        padding: 12px 20px;
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        border: 1px solid #30363d;
-        font-size: 0.85rem;
-        font-weight: 700;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      }
-      .wa-advisor i {
-        color: #25d366;
-        font-size: 1.2rem;
-      }
-      .wa-advisor:hover {
-        background: #2d333b;
-        border-color: #25d366;
-        transform: translateX(-5px);
-      }
-      .wa-main-btn {
-        background: #25d366;
-        color: #fff;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.8rem;
-        cursor: pointer;
-        border: none;
-        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-        transition: all 0.4s ease;
-        position: relative;
-      }
-      /* Animación de pulso */
-      .wa-main-btn::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        border: 2px solid #25d366;
-        animation: pulseWA 2s infinite;
-      }
-      /* Estado activo del botón principal */
-      .wa-main-btn.active {
-        background: #ff3b30 !important;
-        transform: rotate(135deg);
-        box-shadow: 0 8px 25px rgba(255, 59, 48, 0.4);
-      }
-      .wa-main-btn.active::after {
-        display: none;
-      }
-
-      @keyframes pulseWA {
-        0% { transform: scale(1); opacity: 0.8; }
-        100% { transform: scale(1.6); opacity: 0; }
-      }
-
-      @keyframes popIn {
-        from { opacity: 0; transform: scale(0.5) translateY(20px); }
-        to { opacity: 1; transform: scale(1) translateY(0); }
-      }
-      
-      @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-
-      /* --- MEDIA QUERIES (MÓVIL) --- */
       @media (max-width: 992px) {
         .grid-standard, .diff-grid { grid-template-columns: 1fr; }
         nav ul { display: none; }
         .mobile-nav-icons { display: flex; }
-        .logo-text { font-size: 0.9rem; }
         .hero-content h1 { font-size: 2.2rem; }
-        .wa-container { bottom: 20px; right: 20px; }
+        #v-parallax { min-width: 180%; }
       }
     </style>
   </head>
   <body>
     <nav>
       <div class="logo-container">
-        <img
-          src="img/logo.png"
-          alt="El Izquierdo C.A."
-          class="logo-img"
-          onerror="this.style.display = 'none'"
-        />
+        <img src="img/logo.png" alt="El Izquierdo C.A. Logo" class="logo-img" onerror="this.style.display = 'none'" />
         <span class="logo-text">EL IZQUIERDO C.A.</span>
       </div>
       <ul>
@@ -482,102 +295,96 @@
       </div>
       <div class="parallax-overlay">
         <div class="hero-content">
-          <h1>Seguridad Inteligente</h1>
-          <p>CCTV • Conectividad • Soporte IT Especializado</p>
-          <a href="https://suniagajoberland.github.io/catalogo/" class="cta-button">Ver Catálogo</a>
+          <h1>El Izquierdo C.A.</h1>
+          <p>Líderes en CCTV, Redes y Soporte IT en Venezuela</p>
+          <a href="https://suniagajoberland.github.io/catalogo/" class="cta-button">Explorar Catálogo de Marcas</a>
         </div>
       </div>
     </header>
 
     <section id="nosotros">
       <div style="text-align: center; margin-bottom: 30px">
-        <h2 style="margin-bottom: 10px">Compromiso Tecnológico</h2>
+        <h2 style="margin-bottom: 10px">Expertos en Tecnología y Seguridad</h2>
         <h3 style="color: #79c0ff; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 300;">
-          Nuestra Misión Profesional
+          El Izquierdo C.A. - Ingeniería con Propósito
         </h3>
       </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; border-top: 1px solid #30363d; padding-top: 30px;" class="grid-standard">
         <div>
           <p style="margin-bottom: 15px; font-size: 1.05rem">
-            En <strong>El Izquierdo C.A.</strong>, transformamos la seguridad en ecosistemas inteligentes.
+            En <strong>El Izquierdo C.A.</strong>, posicionamos su seguridad a otro nivel con equipos originales de <strong>Hikvision, Dahua y Cisco</strong>.
           </p>
           <p style="color: #8b949e; border-left: 3px solid #58a6ff; padding-left: 15px;">
-            Fusionamos ingeniería de vanguardia con soporte de respuesta inmediata en toda Venezuela.
+            Nuestra especialidad es la integración de sistemas de vigilancia y redes de alta velocidad para el mercado venezolano.
           </p>
         </div>
         <div style="background: rgba(88, 166, 255, 0.05); padding: 20px; border-radius: 12px; border: 1px dashed rgba(88, 166, 255, 0.2);">
           <ul style="list-style: none">
-            <li style="margin-bottom: 10px"><i class="fas fa-check-circle" style="color: #58a6ff; margin-right: 10px"></i>Innovación Directa</li>
-            <li style="margin-bottom: 10px"><i class="fas fa-check-circle" style="color: #58a6ff; margin-right: 10px"></i>Soberanía de Datos</li>
-            <li><i class="fas fa-check-circle" style="color: #58a6ff; margin-right: 10px"></i>Confianza Certificada</li>
+            <li style="margin-bottom: 10px"><i class="fas fa-check-circle" style="color: #58a6ff; margin-right: 10px"></i>Soporte Hikvision y Dahua</li>
+            <li style="margin-bottom: 10px"><i class="fas fa-check-circle" style="color: #58a6ff; margin-right: 10px"></i>Redes TP-Link y Ubiquiti</li>
+            <li><i class="fas fa-check-circle" style="color: #58a6ff; margin-right: 10px"></i>Garantía Certificada El Izquierdo</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section id="diferenciadores">
-        <h2>¿Por qué elegirnos?</h2>
+        <h2>¿Por qué elegir El Izquierdo C.A.?</h2>
         <div class="diff-grid">
           <div class="diff-item">
             <i class="fas fa-certificate"></i>
             <h4>Garantía Real</h4>
-            <p>Respaldo directo.</p>
+            <p>Respaldo en cada equipo.</p>
           </div>
           <div class="diff-item">
             <i class="fas fa-user-shield"></i>
             <h4>Personal Certificado</h4>
-            <p>Ingeniería técnica.</p>
+            <p>Técnicos especialistas.</p>
           </div>
           <div class="diff-item">
             <i class="fas fa-bolt"></i>
             <h4>Respuesta Inmediata</h4>
-            <p>Atención prioritaria.</p>
+            <p>Atención prioritaria 24/7.</p>
           </div>
           <div class="diff-item">
             <i class="fas fa-box-open"></i>
-            <h4>Stock de Élite</h4>
-            <p>Marcas líderes.</p>
+            <h4>Stock Hikvision / Dahua</h4>
+            <p>Equipos siempre disponibles.</p>
           </div>
         </div>
       </section>
   
       <section id="productos">
-        <h2>Catálogo Destacado</h2>
+        <h2>Marcas y Soluciones Destacadas</h2>
         <div class="grid-standard">
           <div class="card-standard" onclick="toggleCardVideo(this)">
             <div class="media-wrapper">
-              <img src="https://media.istockphoto.com/id/1483190286/photo/cctv-cameras-playback-in-coworking-office.jpg?s=1024x1024&w=is&k=20&c=LI2fdZ2VH7zFvZsz_rg4tjH9rIoFCCR_kVh93DHXggA=" alt="CCTV" style="width: 100%" />
-              <video loop playsinline muted>
-                <source src="https://media.istockphoto.com/id/1471999059/video/playback-from-cctv-cameras-displayed-on-tablet.mp4?s=mp4-640x640-is&k=20&c=eRL5zJdEkllIy5zHghGB2yLyErSch3_gFxGUN4Dcvo0=" type="video/mp4" />
-              </video>
+              <img src="https://media.istockphoto.com/id/1483190286/photo/cctv-cameras-playback-in-coworking-office.jpg?s=1024x1024&w=is&k=20&c=LI2fdZ2VH7zFvZsz_rg4tjH9rIoFCCR_kVh93DHXggA=" alt="CCTV El Izquierdo" style="width: 100%" />
+              <video loop playsinline muted><source src="https://media.istockphoto.com/id/1471999059/video/playback-from-cctv-cameras-displayed-on-tablet.mp4?s=mp4-640x640-is&k=20&c=eRL5zJdEkllIy5zHghGB2yLyErSch3_gFxGUN4Dcvo0=" type="video/mp4" /></video>
             </div>
             <div class="card-body-standard">
-              <h3>Seguridad CCTV</h3>
-              <p>Cámaras IP y vigilancia remota.</p>
+              <h3>Vigilancia CCTV</h3>
+              <p>Seguridad con Hikvision y Dahua.</p>
             </div>
           </div>
           <div class="card-standard" onclick="toggleCardVideo(this)">
             <div class="media-wrapper">
-              <img src="https://plus.unsplash.com/premium_photo-1683134033173-f43b86168498?q=80&w=870&auto=format&fit=crop" alt="Redes" style="width: 100%" />
-              <video loop playsinline muted>
-                <source src="https://media.istockphoto.com/id/2154818826/video/hyperlapse-top-view-smart-city-wireless-network-signal-data-transmission-high-speed-and.mp4?s=mp4-640x640-is&k=20&c=hqKNZO9iLt1SOkl2DRT39IT7RcPyLYDASITuFW_AjdI=" type="video/mp4" />
-              </video>
+              <img src="https://plus.unsplash.com/premium_photo-1683134033173-f43b86168498?q=80&w=870&auto=format&fit=crop" alt="Redes TP-Link Venezuela" style="width: 100%" />
+              <video loop playsinline muted><source src="https://media.istockphoto.com/id/2154818826/video/hyperlapse-top-view-smart-city-wireless-network-signal-data-transmission-high-speed-and.mp4?s=mp4-640x640-is&k=20&c=hqKNZO9iLt1SOkl2DRT39IT7RcPyLYDASITuFW_AjdI=" type="video/mp4" /></video>
             </div>
             <div class="card-body-standard">
               <h3>Redes & Enlaces</h3>
-              <p>Networking profesional.</p>
+              <p>Networking TP-Link y Cisco.</p>
             </div>
           </div>
           <div class="card-standard" onclick="toggleCardVideo(this)">
             <div class="media-wrapper">
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Hardware" style="width: 100%" />
-              <video loop playsinline muted>
-                <source src="https://media.istockphoto.com/id/1360056996/video/big-data-center-female-chief-technology-officer-using-laptop-standing-in-warehouse-activates.mp4?s=mp4-640x640-is&k=20&c=VCSHUV8mr2ICTFDecqCBQ0i5Db-SKJhZYHk7YJZxbOE=" type="video/mp4" />
-              </video>
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Hardware IT Venezuela" style="width: 100%" />
+              <video loop playsinline muted><source src="https://media.istockphoto.com/id/1360056996/video/big-data-center-female-chief-technology-officer-using-laptop-standing-in-warehouse-activates.mp4?s=mp4-640x640-is&k=20&c=VCSHUV8mr2ICTFDecqCBQ0i5Db-SKJhZYHk7YJZxbOE=" type="video/mp4" /></video>
             </div>
             <div class="card-body-standard">
               <h3>Componentes IT</h3>
-              <p>Periféricos y almacenamiento.</p>
+              <p>Discos Western Digital y más.</p>
             </div>
           </div>
         </div>
@@ -591,46 +398,31 @@
       </div>
   
       <section id="servicios">
-        <h2>Servicios Profesionales</h2>
+        <h2>Servicios Profesionales de El Izquierdo C.A.</h2>
         <div class="grid-standard">
           <div class="card-standard" onclick="toggleCardVideo(this)">
             <div class="media-wrapper">
-              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80" alt="Instalación" style="width: 100%" />
-              <video loop playsinline muted>
-                <source src="https://media.istockphoto.com/id/2165110299/video/male-mature-installer-sets-up-cctv-camera-in-office-room-using-tablet-computer.mp4?s=mp4-640x640-is&k=20&c=FPqLSIlqYmO8xZIGy9RNMmTREoO5uxBO5a3xABY7lyk=" type="video/mp4" />
-              </video>
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80" alt="Instalación Cámaras" style="width: 100%" />
+              <video loop playsinline muted><source src="https://media.istockphoto.com/id/2165110299/video/male-mature-installer-sets-up-cctv-camera-in-office-room-using-tablet-computer.mp4?s=mp4-640x640-is&k=20&c=FPqLSIlqYmO8xZIGy9RNMmTREoO5uxBO5a3xABY7lyk=" type="video/mp4" /></video>
             </div>
             <div class="service-icon-tag"><i class="fas fa-tools"></i></div>
-            <div class="card-body-standard">
-              <h3>Instalación</h3>
-              <p>Configuración técnica experta.</p>
-            </div>
+            <div class="card-body-standard"><h3>Instalación Técnica</h3><p>Configuración Hikvision experta.</p></div>
           </div>
           <div class="card-standard" onclick="toggleCardVideo(this)">
             <div class="media-wrapper">
-              <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=600&q=80" alt="Soporte" style="width: 100%" />
-              <video loop playsinline muted>
-                <source src="https://media.istockphoto.com/id/1659387314/video/young-man-working-with-laptop-and-checking-equipment-in-dark-server-room.mp4?s=mp4-640x640-is&k=20&c=4f9AqoUX94qEuKKA9ANIfmavBdzZQ67EoVFBjuaK1aI=" type="video/mp4" />
-              </video>
+              <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=600&q=80" alt="Soporte IT" style="width: 100%" />
+              <video loop playsinline muted><source src="https://media.istockphoto.com/id/1659387314/video/young-man-working-with-laptop-and-checking-equipment-in-dark-server-room.mp4?s=mp4-640x640-is&k=20&c=4f9AqoUX94qEuKKA9ANIfmavBdzZQ67EoVFBjuaK1aI=" type="video/mp4" /></video>
             </div>
             <div class="service-icon-tag"><i class="fas fa-shield-alt"></i></div>
-            <div class="card-body-standard">
-              <h3>Soporte IT</h3>
-              <p>Mantenimiento preventivo.</p>
-            </div>
+            <div class="card-body-standard"><h3>Soporte Técnico</h3><p>Mantenimiento especializado.</p></div>
           </div>
           <div class="card-standard" onclick="toggleCardVideo(this)">
             <div class="media-wrapper">
-              <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Auditoría" style="width: 100%" />
-              <video loop playsinline muted>
-                <source src="https://media.istockphoto.com/id/1360767277/video/ethnic-male-worker-introducing-telecommunication-system-to-partner.mp4?s=mp4-640x640-is&k=20&c=HpCokFsWLoIbo3oikgIBzcU55brpK-OmfEF4J-q-LAw=" type="video/mp4" />
-              </video>
+              <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Auditoría WiFi" style="width: 100%" />
+              <video loop playsinline muted><source src="https://media.istockphoto.com/id/1360767277/video/ethnic-male-worker-introducing-telecommunication-system-to-partner.mp4?s=mp4-640x640-is&k=20&c=HpCokFsWLoIbo3oikgIBzcU55brpK-OmfEF4J-q-LAw=" type="video/mp4" /></video>
             </div>
             <div class="service-icon-tag"><i class="fas fa-project-diagram"></i></div>
-            <div class="card-body-standard">
-              <h3>Auditoría</h3>
-              <p>Optimización WiFi y LAN.</p>
-            </div>
+            <div class="card-body-standard"><h3>Auditoría de Redes</h3><p>Optimización Ubiquiti y Cisco.</p></div>
           </div>
         </div>
       </section>
@@ -641,9 +433,7 @@
         <a href="https://wa.me/584143126327" target="_blank" class="wa-advisor"><i class="fab fa-whatsapp"></i> Milvi A.</a>
         <a href="https://wa.me/584226382165" target="_blank" class="wa-advisor"><i class="fab fa-whatsapp"></i> Joberland S.</a>
       </div>
-      <button class="wa-main-btn" onclick="toggleWhatsApp()" id="waMainBtn">
-        <i class="fab fa-whatsapp" id="waIcon"></i>
-      </button>
+      <button class="wa-main-btn" onclick="toggleWhatsApp()" id="waMainBtn"><i class="fab fa-whatsapp" id="waIcon"></i></button>
     </div>
 
     <footer>
@@ -651,8 +441,8 @@
         <a href="https://www.instagram.com/elizquierdoca1/" target="_blank" style="font-size: 1.5rem; color: #8b949e;"><i class="fab fa-instagram"></i></a>
         <a href="mailto:info@elizquierdoca.com" style="font-size: 1.5rem; color: #8b949e;"><i class="fas fa-envelope"></i></a>
       </div>
-      <p><strong>EL IZQUIERDO C.A.</strong></p>
-      <p style="font-size: 0.8rem; color: #8b949e">© 2026 Caracas, Venezuela.</p>
+      <p><strong>EL IZQUIERDO C.A.</strong> - Seguridad Electrónica en Caracas, Venezuela.</p>
+      <p style="font-size: 0.8rem; color: #8b949e">© 2026 Todos los derechos reservados.</p>
     </footer>
 
     <script>
@@ -661,32 +451,24 @@
         const btn = document.getElementById("waMainBtn");
         const icon = document.getElementById("waIcon");
         const isVisible = menu.style.display === "flex";
-        
         if (!isVisible) {
-          menu.style.display = "flex";
-          btn.classList.add("active");
-          icon.classList.remove("fab", "fa-whatsapp");
-          icon.classList.add("fas", "fa-times");
+          menu.style.display = "flex"; btn.classList.add("active");
+          icon.classList.remove("fab", "fa-whatsapp"); icon.classList.add("fas", "fa-times");
         } else {
-          menu.style.display = "none";
-          btn.classList.remove("active");
-          icon.classList.remove("fas", "fa-times");
-          icon.classList.add("fab", "fa-whatsapp");
+          menu.style.display = "none"; btn.classList.remove("active");
+          icon.classList.remove("fas", "fa-times"); icon.classList.add("fab", "fa-whatsapp");
         }
       }
 
       function toggleCardVideo(card) {
         const video = card.querySelector("video");
         if (card.classList.contains("playing")) {
-          video.pause();
-          card.classList.remove("playing");
+          video.pause(); card.classList.remove("playing");
         } else {
           document.querySelectorAll(".card-standard.playing").forEach((c) => {
-            c.querySelector("video").pause();
-            c.classList.remove("playing");
+            c.querySelector("video").pause(); c.classList.remove("playing");
           });
-          video.play();
-          card.classList.add("playing");
+          video.play(); card.classList.add("playing");
         }
       }
 
